@@ -258,6 +258,9 @@ class System(object):
         elif '13.0' in rest_versions:
             _LOGGER.info('Visonics Rest API version 13.0 is supported.')
             self.__api.setVersionUrls('13.0')
+        elif '14.0' in rest_versions:
+            _LOGGER.info('Visonics Rest API version 14.0 is supported.')
+            self.__api.setVersionUrls('14.0')
         else:
             raise Exception(f'Visonics Rest API versions 8.0, 9.0, 10.0, 12.0 or 13.0 are not supported by server. Supported versions: {", ".join(rest_versions)}')
 
